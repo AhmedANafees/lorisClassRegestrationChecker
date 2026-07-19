@@ -1,7 +1,6 @@
 # LORIS Course Watcher — Phase 0
 
-This has to run on **your own computer** (not in this chat), because it
-needs a real browser and your real MFA approval on your phone.
+This has to run on **your own computer**
 
 ## One-time setup
 

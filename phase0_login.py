@@ -43,6 +43,17 @@ def main():
         print("=" * 60)
         input("Press Enter once you're fully logged in... ")
 
+        if page.get_by_text("Guest Sign In").count() > 0:
+            print("\nWARNING: This page still shows 'Guest Sign In' in the top-right.")
+            print("It looks like you're not actually logged in yet.")
+            print("Make sure you can see your name (not 'Guest Sign In') in the")
+            print("top-right corner before continuing.")
+            proceed = input("Save the session anyway? (y/N): ").strip().lower()
+            if proceed != "y":
+                print("Not saving. Log in fully, then run this script again.")
+                browser.close()
+                return
+
         context.storage_state(path=str(SESSION_FILE))
         print(f"\nSaved session to {SESSION_FILE}")
         print("You can close the browser window now.")

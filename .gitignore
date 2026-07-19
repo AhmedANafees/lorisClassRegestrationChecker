@@ -1,1 +1,4 @@
 session.json
+.env
+state.json
+loris_checker.log*
